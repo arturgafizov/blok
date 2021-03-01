@@ -32,6 +32,7 @@ ADMIN_URL = os.environ.get('ADMIN_URL', 'admin')
 
 INSTALLED_APPS = [
     'main.apps.MainConfig',
+    'user.apps.UserConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
