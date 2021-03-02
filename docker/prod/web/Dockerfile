@@ -27,7 +27,7 @@ RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/web/wheels -r /usr/s
 # pull official base image
 FROM python:3.9.1-alpine
 
-# create the app user
+# create the app users
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -55,5 +55,5 @@ COPY --chown=ubuntu:ubuntu ./web $APP_HOME
 
 RUN flake8 . && chmod +x /entrypoint.sh
 
-## change to the www user
+## change to the www users
 #USER ubuntu

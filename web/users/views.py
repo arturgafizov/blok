@@ -30,5 +30,9 @@ from . import serializers
 from . import swagger_schemas as schemas
 
 # Create your views here.
+from users.models import User
+from users.serializers import UserSerializer
 
-
+class UserRetrieve(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
